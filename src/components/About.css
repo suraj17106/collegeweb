@@ -1,0 +1,136 @@
+.about-container {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white for glass effect */
+    backdrop-filter: blur(6px); /* Adds a subtle blur effect */
+    -webkit-backdrop-filter: blur(6px); /* For Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for definition */
+    border-radius: 12px; /* Rounded corners for a modern look */
+    color: #000000; /* Ensure text remains visible */
+    animation: fadeInPage 0.8s ease-in;
+}
+
+.about-container h1 {
+    color: #000000;
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -1.44px;
+    animation: slideInDown 0.8s ease-out;
+}
+
+.about-section {
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--border);
+    animation: slideInUp 0.8s ease-out;
+}
+
+.about-section-last {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.about-section h2 {
+    color: #000000; /* Black for headings */
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: -0.24px;
+    text-align: left;
+}
+
+.about-section p {
+    color: #000000; /* Black for readability */
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: justify;
+    margin: 0;
+    letter-spacing: 0.18px;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        padding: 30px 16px;
+    }
+
+    .about-container h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .about-section {
+        margin-bottom: 28px;
+        padding-bottom: 28px;
+    }
+
+    .about-section h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .about-section p {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-container {
+        padding: 24px 12px;
+    }
+
+    .about-container h1 {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .about-section {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .about-section h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .about-section p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,163 @@
+.home-container {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: fadeInPage 1s ease-in;
+}
+
+.home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/campus.jpg.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.home-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
+    z-index: 2;
+}
+
+.home-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--text-h);
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    letter-spacing: -1.68px;
+    color: #ffcc00; /* Golden yellow for an attractive and vibrant look */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Enhance the glow effect */
+    animation: slideInDown 0.8s ease-out, floatAnimation 4s ease-in-out infinite;
+}
+
+.home-content p {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    color: #ffcc00; /* Golden yellow for an attractive and vibrant look */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Enhance the glow effect */
+    animation: slideInUp 1s ease-out 0.2s both;
+}
+
+.cta-button {
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffcc00 0%, #ffb300 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    animation: slideInUp 1.2s ease-out 0.4s both;
+    box-shadow: 0 10px 30px rgba(255, 204, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 45px rgba(255, 204, 0, 0.5);
+    background: linear-gradient(135deg, #ffdd33 0%, #ffcc00 100%);
+}
+
+.cta-button:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .home-container {
+        min-height: 500px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+
+    .home-content p {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 640px) {
+    .home-container {
+        min-height: 400px;
+    }
+
+    .home-background {
+        background-attachment: scroll;
+    }
+
+    .home-content h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .home-content p {
+        font-size: 18px;
+    }
+}
