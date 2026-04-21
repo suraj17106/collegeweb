@@ -12,3 +12,6 @@ A simple and responsive College Website project built using core web technologie
 HTML5 – Structure
 CSS3 – Styling
 JavaScript – Interactivity (if used)
+
+
+demo link:https://clg-website-cas.netlify.app/
